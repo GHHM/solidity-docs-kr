@@ -1,4 +1,4 @@
-.. index:: contract, state variable, function, event, struct, enum, function;modifier
+
 
 .. _contract_structure:
 
@@ -22,12 +22,13 @@
     pragma solidity ^0.4.0;
 
     contract SimpleStorage {
-        uint storedData; // State variable
+        uint storedData; // 상태 변수
         // ...
     }
 
-:ref:`타입`(https://solidity.readthedocs.io/en/develop/types.html#types) 섹션에서 유효한 변수 타입을,
-접근제한자 및 한정자(https://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-accessors ) 섹션에서 쓸 수 있는 접근제한성에 대한 자세한 내용을 살펴볼 수 있다.
+타입(https://solidity.readthedocs.io/en/develop/types.html#types)섹션에서 유효한 변수 타입을,
+접근제한자 및 한정자(https://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-accessors)
+섹션에서 쓸 수 있는 접근제한성에 대한 자세한 내용을 살펴볼 수 있다.
 
 .. _structure-functions:
 
@@ -46,8 +47,8 @@
         }
     }
 
-:ref:`함수호출` 은 내부 혹은 외부에서 호출될 수 있으며
-콘트렉트에 대해서 각기 다른 :ref:`접근제한성`(https://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-accessors )을 가지고 있다.
+함수호출은 내부 혹은 외부에서 호출될 수 있으며
+콘트렉트에 대해서 각기 다른 접근제한성(https://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-accessors)을 가지고 있다.
 
 .. _structure-function-modifiers:
 
@@ -101,7 +102,7 @@
 구조체
 =============
 
-구조체는 여러 변수를 가지는 사용자가 정의한 타입이다. (https://solidity.readthedocs.io/en/develop/types.html#structs)
+구조체는 여러 변수를 가지는 사용자가 정의한 타입이다.(https://solidity.readthedocs.io/en/develop/types.html#structs)
 
 ::
 
@@ -121,7 +122,7 @@
 열거형
 ==========
 
-열거형(Enums) 은 유한개의 집합중 한 가지가 선택될 수 있는 커스텀 타입이다. (https://solidity.readthedocs.io/en/develop/types.html#enums)
+열거형(Enums) 은 유한개의 집합중 한 가지가 선택될 수 있는 커스텀 타입이다.(https://solidity.readthedocs.io/en/develop/types.html#enums)
 
 ::
 
