@@ -3,20 +3,19 @@
 .. _contract_structure:
 
 ***********************
-Structure of a Contract
+콘트랙트 구조
 ***********************
 
-Contracts in Solidity are similar to classes in object-oriented languages.
-Each contract can contain declarations of :ref:`structure-state-variables`, :ref:`structure-functions`,
-:ref:`structure-function-modifiers`, :ref:`structure-events`, :ref:`structure-struct-types` and :ref:`structure-enum-types`.
-Furthermore, contracts can inherit from other contracts.
+솔리디티의 콘트렉트는 객체 지향 언어의 클래스와 비슷하다
+각각의 콘트렉트는 상태 변수, 함수, 함수 모디파이어, 이벤트, 구조체타입과 이넘타입을 선언할 수 있다.
+뿐만 아니라 콘트렉트는 다른 콘트렉트를 상속할 수 있다.
 
 .. _structure-state-variables:
 
-State Variables
+상태변수
 ===============
 
-State variables are values which are permanently stored in contract storage.
+상태 변수는 콘트렉트 저장소에 영속적으로 저장되는 값이다.
 
 ::
 
@@ -27,38 +26,36 @@ State variables are values which are permanently stored in contract storage.
         // ...
     }
 
-See the :ref:`types` section for valid state variable types and
-:ref:`visibility-and-getters` for possible choices for
-visibility.
+:ref:`타입`(https://solidity.readthedocs.io/en/develop/types.html#types) 섹션에서 유효한 변수 타입을,
+접근제한자 및 한정자(https://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-accessors ) 섹션에서 쓸 수 있는 접근제한성에 대한 자세한 내용을 살펴볼 수 있다.
 
 .. _structure-functions:
 
-Functions
+함수
 =========
 
-Functions are the executable units of code within a contract.
+함수는 콘트렉트 내에서 실행 가능한 코드 단위다.
 
 ::
 
     pragma solidity ^0.4.0;
 
     contract SimpleAuction {
-        function bid() public payable { // Function
+        function bid() public payable { // 함수
             // ...
         }
     }
 
-:ref:`function-calls` can happen internally or externally
-and have different levels of visibility (:ref:`visibility-and-getters`)
-towards other contracts.
+:ref:`함수호출` 은 내부 혹은 외부에서 호출될 수 있으며
+콘트렉트에 대해서 각기 다른 :ref:`접근제한성`(https://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-accessors )을 가지고 있다.
 
 .. _structure-function-modifiers:
 
-Function Modifiers
+함수 변환자
 ==================
 
-Function modifiers can be used to amend the semantics of functions in a declarative way
-(see :ref:`modifiers` in contracts section).
+함수 조건자는 함수의 의미(semantic)를 선언적(declarative) 방식으로 수정할 수 있다.
+(콘트렉트의 함수 조건자 https://solidity.readthedocs.io/en/develop/contracts.html#modifiers 참조)
 
 ::
 
@@ -67,53 +64,51 @@ Function modifiers can be used to amend the semantics of functions in a declarat
     contract Purchase {
         address public seller;
 
-        modifier onlySeller() { // Modifier
+        modifier onlySeller() { // 제한자
             require(msg.sender == seller);
             _;
         }
 
-        function abort() public onlySeller { // Modifier usage
+        function abort() public onlySeller { // 모디파이어 사용
             // ...
         }
     }
 
 .. _structure-events:
 
-Events
+이벤트
 ======
 
-Events are convenience interfaces with the EVM logging facilities.
+이벤트는 이더리움 가상머신(EVM)이 손쉽게 로깅할 수 있는 도구로써 사용되는 편리한 인터페이스다.
 
 ::
 
     pragma solidity ^0.4.21;
 
     contract SimpleAuction {
-        event HighestBidIncreased(address bidder, uint amount); // Event
+        event HighestBidIncreased(address bidder, uint amount); // 이벤트 선언
 
         function bid() public payable {
             // ...
-            emit HighestBidIncreased(msg.sender, msg.value); // Triggering event
+            emit HighestBidIncreased(msg.sender, msg.value); // 이벤트 발생
         }
     }
 
-See :ref:`events` in contracts section for information on how events are declared
-and can be used from within a dapp.
+이벤트(https://solidity.readthedocs.io/en/develop/contracts.html#events) 파트에서 이벤트가 어떻게 선언되고 분산어플리케이션에서 어떻게 사용되는지 확인할 수 있다.
 
 .. _structure-struct-types:
 
-Struct Types
+구조체
 =============
 
-Structs are custom defined types that can group several variables (see
-:ref:`structs` in types section).
+구조체는 여러 변수를 가지는 사용자가 정의한 타입이다. (https://solidity.readthedocs.io/en/develop/types.html#structs)
 
 ::
 
     pragma solidity ^0.4.0;
 
     contract Ballot {
-        struct Voter { // Struct
+        struct Voter { // 구조체
             uint weight;
             bool voted;
             address delegate;
@@ -123,16 +118,15 @@ Structs are custom defined types that can group several variables (see
 
 .. _structure-enum-types:
 
-Enum Types
+열거형
 ==========
 
-Enums can be used to create custom types with a finite set of values (see
-:ref:`enums` in types section).
+열거형(Enums) 은 유한개의 집합중 한 가지가 선택될 수 있는 커스텀 타입이다. (https://solidity.readthedocs.io/en/develop/types.html#enums)
 
 ::
 
     pragma solidity ^0.4.0;
 
     contract Purchase {
-        enum State { Created, Locked, Inactive } // Enum
+        enum State { Created, Locked, Inactive } // 열거형
     }
