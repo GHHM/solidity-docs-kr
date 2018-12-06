@@ -12,7 +12,7 @@
 * 다큐멘테이션 개선
 * 'StackExchange(https://ethereum.stackexchange.com)와 Solidity Gitter(https://gitter.im/ethereum/solidity)에서 다른 사용자들의 질문에 답변하기
 * Solidity 깃허브 이슈(https://github.com/ethereum/solidity/issues)문제 수정 및 답변. 특히 'up-for-grabs(https://github.com/ethereum/solidity/issues?q=is%3Aopen+is%3Aissue+label%3Aup-for-grabs)' 
-    외부 참여자들의 
+    외부 참여자들의 입문 이슈를 의미합니다.
   which are
   meant as introductory issues for external contributors.
 
