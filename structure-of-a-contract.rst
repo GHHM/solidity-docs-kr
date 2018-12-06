@@ -6,8 +6,8 @@
 콘트랙트 구조
 ***********************
 
-솔리디티의 콘트렉트는 객체 지향 언어의 클래스와 비슷하다
-각각의 콘트렉트는 상태 변수, 함수, 함수 모디파이어, 이벤트, 구조체타입과 이넘타입을 선언할 수 있다.
+솔리디티의 콘트렉트는 객체 지향 언어의 클래스와 비슷하다.
+각각의 콘트렉트는 상태 변수, 함수, 함수 모디파이어(함수 변환자), 이벤트, 구조체타입과 이넘타입을 선언할 수 있다.
 뿐만 아니라 콘트렉트는 다른 콘트렉트를 상속할 수 있다.
 
 .. _structure-state-variables:
@@ -55,7 +55,7 @@
 함수 변환자
 ==================
 
-함수 조건자는 함수의 의미(semantic)를 선언적(declarative) 방식으로 수정할 수 있다.
+함수 조건자(function modifier)는 함수의 의미(semantic)를 선언적(declarative) 방식으로 수정할 수 있다.
 (콘트렉트의 함수 조건자 https://solidity.readthedocs.io/en/develop/contracts.html#modifiers 참조)
 
 ::
@@ -95,7 +95,7 @@
         }
     }
 
-이벤트(https://solidity.readthedocs.io/en/develop/contracts.html#events) 파트에서 이벤트가 어떻게 선언되고 분산어플리케이션에서 어떻게 사용되는지 확인할 수 있다.
+이벤트(https://solidity.readthedocs.io/en/develop/contracts.html#events)파트에서 이벤트가 어떻게 선언되고 분산어플리케이션에서 어떻게 사용되는지 확인할 수 있다.
 
 .. _structure-struct-types:
 
@@ -122,7 +122,7 @@
 열거형
 ==========
 
-열거형(Enums) 은 유한개의 집합중 한 가지가 선택될 수 있는 커스텀 타입이다.(https://solidity.readthedocs.io/en/develop/types.html#enums)
+열거형(Enums) 은 유한개의 집합 중 한 가지가 선택될 수 있는 커스텀 타입이다.(https://solidity.readthedocs.io/en/develop/types.html#enums)
 
 ::
 

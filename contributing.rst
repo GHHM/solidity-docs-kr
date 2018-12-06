@@ -1,22 +1,19 @@
 ############
-Contributing
+기여하기
 ############
 
-Help is always appreciated!
+도움은 언제나 감사합니다!
 
-To get started, you can try :ref:`building-from-source` in order to familiarize
-yourself with the components of Solidity and the build process. Also, it may be
-useful to become well-versed at writing smart-contracts in Solidity.
+시작하려면 먼저 Solidity의 구성 요소와 빌드 프로세스에 익숙해지기 위해 building-from-source(https://solidity.readthedocs.io/en/v0.5.1/installing-solidity.html#building-from-source)를 시도해보세요.
+를 직접 확인하십시오. 또한 Solidity에서 스마트 컨트렉트 작성에 능숙해지는데 유용합니다.
 
-In particular, we need help in the following areas:
+특히, 우리는 다음의 영역에서 도움이 필요합니다:
 
-* Improving the documentation
-* Responding to questions from other users on `StackExchange
-  <https://ethereum.stackexchange.com>`_ and the `Solidity Gitter
-  <https://gitter.im/ethereum/solidity>`_
-* Fixing and responding to `Solidity's GitHub issues
-  <https://github.com/ethereum/solidity/issues>`_, especially those tagged as
-  `up-for-grabs <https://github.com/ethereum/solidity/issues?q=is%3Aopen+is%3Aissue+label%3Aup-for-grabs>`_ which are
+* 다큐멘테이션 개선
+* 'StackExchange(https://ethereum.stackexchange.com)와 Solidity Gitter(https://gitter.im/ethereum/solidity)에서 다른 사용자들의 질문에 답변하기
+* Solidity 깃허브 이슈(https://github.com/ethereum/solidity/issues)문제 수정 및 답변. 특히 'up-for-grabs(https://github.com/ethereum/solidity/issues?q=is%3Aopen+is%3Aissue+label%3Aup-for-grabs)' 
+    외부 참여자들의 
+  which are
   meant as introductory issues for external contributors.
 
 How to Report Issues
