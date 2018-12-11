@@ -13,27 +13,27 @@
 * 'StackExchange(https://ethereum.stackexchange.com)와 Solidity Gitter(https://gitter.im/ethereum/solidity)에서 다른 사용자들의 질문에 답변하기
 * Solidity 깃허브 이슈(https://github.com/ethereum/solidity/issues)문제 수정 및 답변. 특히 'up-for-grabs(https://github.com/ethereum/solidity/issues?q=is%3Aopen+is%3Aissue+label%3Aup-for-grabs)' 
     외부 참여자들의 입문 이슈를 의미합니다.
-  which are
-  meant as introductory issues for external contributors.
+  
 
-How to Report Issues
+이슈 보고 하기
 ====================
 
-To report an issue, please use the
-`GitHub issues tracker <https://github.com/ethereum/solidity/issues>`_. When
-reporting issues, please mention the following details:
+이슈를 보고하기 위해서 이곳을 이용해 주세요. 
+`GitHub issues tracker <https://github.com/ethereum/solidity/issues>`_.
 
-* Which version of Solidity you are using
-* What was the source code (if applicable)
-* Which platform are you running on
-* How to reproduce the issue
-* What was the result of the issue
-* What the expected behaviour is
+이슈를 보고할 때 아래의 사항을 언급해주세요.
 
-Reducing the source code that caused the issue to a bare minimum is always
-very helpful and sometimes even clarifies a misunderstanding.
+* 사용하는 Solidity 버전
+* (가능하다면) 소스 코드
+* 코드를 실행한 플랫폼
+* 이슈 재현 경로
+* 이슈 결과는 무엇인지
+* 기대 결과은 무엇인지
 
-Workflow for Pull Requests
+이슈 소스 코드를 최소하능로 줄이는 것은 매우 도움이 되며 때로는 오해를 해명하기도 합니다.
+
+
+풀리퀘스트(Pull Requests) 절차
 ==========================
 
 In order to contribute, please fork off of the ``develop`` branch and make your
@@ -82,6 +82,8 @@ Alternatively, there is a testing script at ``scripts/test.sh`` which executes a
 Travis CI even runs some additional tests (including ``solc-js`` and testing third party Solidity frameworks) that require compiling the Emscripten target.
 
 Whiskers
+
+
 ========
 
 *Whiskers* is a templating system similar to `Mustache <https://mustache.github.io>`_. It is used by the
